@@ -66,6 +66,7 @@ async function start() {
 
 	const http = require('http');
 	const os = require('os');
+	const {getListenArgs} = require('@derhuerst/systemd');
 
 	if (Array.isArray(product.serverLicense) && product.serverLicense.length) {
 		console.log(product.serverLicense.join('\n'));
@@ -117,9 +118,9 @@ async function start() {
 	const nodeListenOptions = (
 		parsedArgs['socket-path']
 			? { path: sanitizeStringArg(parsedArgs['socket-path']) }
-			: { host, port: await parsePort(host, sanitizeStringArg(parsedArgs['port'])) }
+			: (getListenArgs() || { host, port: await parsePort(host, sanitizeStringArg(parsedArgs['port'])) })
 	);
-	server.listen(nodeListenOptions, async () => {
+	server.listen(...nodeListenOptions, async () => {
 		let output = Array.isArray(product.serverGreeting) && product.serverGreeting.length ? `\n\n${product.serverGreeting.join('\n')}\n\n` : ``;
 
 		if (typeof nodeListenOptions.port === 'number' && parsedArgs['print-ip-address']) {

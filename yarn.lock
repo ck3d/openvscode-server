@@ -387,6 +387,11 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-3.0.1.tgz#d84597fbc0f897240c12fc0a31e492b036c70e40"
   integrity sha512-NPljRHkq4a14YzZ3YD406uaxh7s0g6eAq3L9aLOWywoqe8PkYamAvtsh7KNX6c++ihDrJ0RiU+/z7rGnhlZ5ww==
 
+"@derhuerst/systemd@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@derhuerst/systemd/-/systemd-0.5.0.tgz#22643c8207d049959bcdb2222f5dc3111d4fbf1c"
+  integrity sha512-lOn8TDUTm1bjCPipKW0fEsNDrFy4x4saWilCV4o4QreazYDQ2wrkeESdGrjoKm2BFm7gKZr1IxinkpIrHbLhmQ==
+
 "@discoveryjs/json-ext@^0.5.0":
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.3.tgz#90420f9f9c6d3987f176a19a7d8e764271a2f55d"
